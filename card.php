@@ -11,6 +11,8 @@ $filename=$name.'.jpg';
       
       $jpg_image = imagecreatefromjpeg('photo/'.$year.'.jpg');
       $src = imagecreatefromjpeg('ID/'.$team.'/'.$year.'/'.$name.'.jpg');
+      if(!$src)
+        $src = imagecreatefrompng('ID/'.$team.'/'.$year.'/'.$name.'.png');
       $size = 543;
 
       
